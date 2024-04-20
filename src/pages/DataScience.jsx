@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Course from "../components/course";
 
 const DataScience = () => {
@@ -26,9 +27,11 @@ const DataScience = () => {
 
     return (
         <>
-            <div className="d-flex justify-content-center flex-wrap gap-5 p-5">
+            <div className="d-flex justify-content-center flex-wrap gap-5 p-5 bg-light">
                 {obj.map((val) => (
-                    <Course {...val} key={val.id} />
+                    <Link to={`/datascience/${val.id}`} key={val.id} style={{ textDecoration: "none" }}>
+                        <Course {...val} key={val.id} />
+                    </Link>
                 ))}
             </div>
         </>

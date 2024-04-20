@@ -17,9 +17,9 @@ const AI = () => {
 
     return (
         <>
-            <div className="d-flex justify-content-center flex-wrap gap-5 p-5">
+            <div className="d-flex justify-content-center flex-wrap gap-5 p-5 bg-light">
                 {obj.map((val) => (
-                    <Link to={`/ai/${val.id}`} key={val.id}>
+                    <Link to={`/ai/${val.id}`} key={val.id} style={{ textDecoration: "none" }}>
                         <Course {...val} key={val.id} />
                     </Link>
                 ))}

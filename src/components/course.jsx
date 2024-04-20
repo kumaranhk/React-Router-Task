@@ -1,4 +1,4 @@
-const Course = ({ title, image }) => {
+const Course = ({ title, image, category }) => {
     return (
         <>
             <div className="card" style={{width: "20rem"}}>
